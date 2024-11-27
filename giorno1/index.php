@@ -4,14 +4,8 @@
 <?php 
 
 $integer = 10;
-
-
 $float = 10.5;
-
-
 $string = 'ciao';
-
-
 $boolean = true;
 
 
@@ -19,6 +13,19 @@ echo ($integer) . "\n";
 echo ($float) . "\n";
 echo ($string) . "\n";
 echo ($boolean) . "\n";
+
+define ('numeriInteri', 10);
+define ('numeriDecimali',10.5);
+define ('stringhe', "ciao" );
+define ('valoriLogici', true);
+
+echo numeriInteri . "\n";
+echo numeriDecimali . "\n";
+echo stringhe . "\n";
+echo valoriLogici . "\n" ;
+
+
+
 
 // traccia2
 
@@ -33,6 +40,10 @@ $text8 = "tutto";
 
 echo "$text1 $text2 $text3 $text4\n";
 echo "$text5 $text6 $text7 $text8\n";
+
+
+
+
 
 // traccia 3 
 
@@ -61,9 +72,11 @@ $possa = $words2['elemento2'];
 $fortuna = $words2['elemento3'][3][0]; 
 $essere = $words1[2]; 
 $vostro = $words1[0];
-$sempre = $words1[5]; 
+$sempre = $words1[5];
+$favore = $words2['elemento3'][1];
+$fine = $words2 ['fine'][0];
 
-$results = "$e $possa la $fortuna $essere $sempre a $vostro favore!";
+$results = "$e $possa la $fortuna $essere $sempre a $vostro $favore$fine \n";
 
 echo $results;
 
@@ -98,19 +111,19 @@ foreach ($users as $user) {
 
 // traccia 5 
 
-$numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11,12,13,14,15,16,17,18,19,20];
-$sum = 0;
-$count = 0;
+$numeri = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11,12,13,14,15,16,17,18,19,20];
+$somma = 0;
+$numPari = 0;
 
-foreach ($numbers as $number) {
-    if ($number % 2 === 0) { 
-        $sum += $number;
-        $count++;
+foreach ($numeri as $numbero) {
+    if ($numbero % 2 === 0) { 
+        $somma += $numbero;
+        $numPari++;
     }
 }
 
-if ($count > 0) {
-    $average = $sum / $count;
+if ($numPari > 0) {
+    $average = $somma / $numPari;
     echo "La media dei numeri pari è: $average\n";
 } else {
     echo "Non ci sono numeri pari nell'array.\n";
